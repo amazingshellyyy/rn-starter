@@ -13,11 +13,12 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      SOURCE_DIR: ./assets/icon.png
+      SOURCE_DIR: ./assets
     steps: 
       - name: S3 Deploy
         uses: Reggionick/s3-deploy@v3.1.1
         with:
+          folder: ./assets
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: us-west-1
 

@@ -17,7 +17,7 @@ jobs:
       - name: S3 Deploy
         uses: Reggionick/s3-deploy@v3.1.1
         with:
-          folder: assets
+          folder: ./assets
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: us-west-1
 

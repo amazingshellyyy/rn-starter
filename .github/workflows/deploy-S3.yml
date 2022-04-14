@@ -21,4 +21,5 @@ jobs:
           folder: build
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: us-west-1
+          private: true
 
